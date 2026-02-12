@@ -1,0 +1,105 @@
+// ============================================
+// AIX Landing - Tools Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.tools {
+  position: relative;
+  padding-block: var(--section-padding-y);
+  overflow: hidden;
+  background-image: url("../images/bg/tool-featured-bg.png");
+  background-position: center;
+  background-size: 48%;
+  background-repeat: no-repeat;
+
+  &__glow {
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translateX(calc(-50% + 30px));
+    width: 1024px;
+    height: 1024px;
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 73, 0, 0.3) 0%,
+      rgba(255, 73, 0, 0.15) 30%,
+      transparent 60%
+    );
+    opacity: 0.21;
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px 128px;
+  }
+}
+
+.tool-card {
+  position: relative;
+  @include mixins.flex-column(22px);
+  width: 432px;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  @include mixins.glass-effect();
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  @include mixins.transition(transform, var(--transition-base));
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__icon {
+    height: 89px;
+
+    img {
+      max-height: 100%;
+      width: auto;
+      @include mixins.object-fit(contain);
+    }
+  }
+
+  &__title {
+    @include mixins.typography-heading(22px, 500, 28px);
+    color: var(--color-text);
+  }
+
+  &__text {
+    height: 89px;
+    @include mixins.typography-primary(18px, 400, 24px);
+    color: var(--color-text);
+    overflow: hidden;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    height: 32px;
+    padding: 4px 12px;
+    background-color: #f7f7f7;
+    border-radius: var(--radius-sm);
+    @include mixins.typography-primary(16px, 500, 22px);
+    color: var(--color-text-dark);
+    @include mixins.transition(all, var(--transition-fast));
+
+    svg {
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}

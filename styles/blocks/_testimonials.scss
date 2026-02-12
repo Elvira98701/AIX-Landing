@@ -1,0 +1,52 @@
+// ============================================
+// AIX Landing - Testimonials Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.testimonials {
+  padding-block: var(--section-padding-y);
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 73px;
+  }
+}
+
+.phone-mockup {
+  position: relative;
+  flex: 1;
+  max-width: 230px;
+  aspect-ratio: 390 / 844;
+
+  &__frame {
+    position: absolute;
+    inset: -3.32% -9.91% -3.32% -9.74%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__device {
+    width: 100%;
+    height: 100%;
+    @include mixins.object-fit(contain);
+  }
+
+  &__screen {
+    position: absolute;
+    top: 0;
+    left: 0.77%;
+    right: 0.77%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      @include mixins.object-fit(cover);
+      border-radius: var(--radius-lg);
+    }
+  }
+}

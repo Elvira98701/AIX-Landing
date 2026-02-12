@@ -1,0 +1,20 @@
+// ============================================
+// AIX Landing - Notifications Intro Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.notifications-intro {
+  padding-top: 80px;
+  padding-bottom: 155px;
+  text-align: center;
+
+  &__container {
+    min-height: 519px;
+    max-width: 753px;
+  }
+
+  &__icon {
+    max-width: 233px;
+  }
+}

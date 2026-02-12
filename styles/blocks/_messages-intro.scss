@@ -1,0 +1,19 @@
+// ============================================
+// AIX Landing - Messages Intro Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.messages-intro {
+  padding-top: 80px;
+  padding-bottom: 130px;
+
+  &__container {
+    min-height: 472px;
+    max-width: 753px;
+  }
+
+  &__icon {
+    max-width: 178px;
+  }
+}

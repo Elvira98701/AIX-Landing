@@ -1,0 +1,44 @@
+// ============================================
+// AIX Landing - Notifications Feature Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.notifications {
+  padding-block: var(--section-padding-y);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  &__glow {
+    position: absolute;
+    bottom: 0;
+    right: -25%;
+    max-width: 1389px;
+    height: 800px;
+  }
+
+  &__container {
+    inset: 0;
+    position: absolute;
+    z-index: 10;
+    @include mixins.flex-center;
+  }
+
+  &__header {
+    max-width: 446px;
+  }
+
+  &__images {
+    display: flex;
+    flex: 1;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    z-index: 1;
+  }
+
+  &__image {
+    max-width: 390px;
+  }
+}

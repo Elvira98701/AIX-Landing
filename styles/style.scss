@@ -1,0 +1,41 @@
+// ============================================
+// AIX Landing - Main Stylesheet
+// ============================================
+
+// Fonts (no variables needed)
+@use "fonts";
+
+// Variables & Base
+@use "variables";
+@use "mixins";
+@use "reset";
+@use "typography";
+@use "components";
+
+// Layout
+@use "blocks/header";
+@use "blocks/hero";
+@use "blocks/partners";
+@use "blocks/benefits";
+@use "blocks/tools";
+@use "blocks/testimonials";
+@use "blocks/pricing";
+@use "blocks/footer";
+
+@use "blocks/analytics-intro";
+@use "blocks/accounts";
+@use "blocks/demand";
+@use "blocks/pulse";
+@use "blocks/period";
+@use "blocks/cities";
+@use "blocks/ads";
+
+@use "blocks/manager-intro";
+@use "blocks/promotion";
+@use "blocks/features";
+
+@use "blocks/messages-intro";
+@use "blocks/messages-feature";
+
+@use "blocks/notifications-intro";
+@use "blocks/notifications";

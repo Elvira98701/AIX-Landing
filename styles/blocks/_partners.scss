@@ -1,0 +1,44 @@
+// ============================================
+// AIX Landing - Partners Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.partners {
+  padding-block: var(--section-padding-y);
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+  }
+
+  &__item {
+    opacity: 0.38;
+    @include mixins.transition(opacity);
+
+    &:first-child {
+      width: 290px;
+      height: 140px;
+    }
+
+    &:last-child {
+      width: 308px;
+      height: 141px;
+      background: var(--color-text);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      @include mixins.object-fit(contain);
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

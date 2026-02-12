@@ -1,0 +1,38 @@
+// ============================================
+// AIX Landing - Pulse Section
+// ============================================
+
+.pulse {
+  padding-block: var(--section-padding-y);
+  position: relative;
+
+  &__glow {
+    position: absolute;
+    top: 324px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__container {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__header {
+    position: relative;
+    max-width: 701px;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+  }
+}

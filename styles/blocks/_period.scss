@@ -1,0 +1,28 @@
+// ============================================
+// AIX Landing - Period Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.period {
+  padding-block: var(--section-padding-y);
+  background-image: url("../images/bg/lines.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  &__container {
+    inset: 0;
+    position: absolute;
+    z-index: 10;
+    @include mixins.flex-center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 742px;
+  }
+}

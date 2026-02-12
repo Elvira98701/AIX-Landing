@@ -1,0 +1,7 @@
+# AIX Landing - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aix-avito.pro/sitemap.xml

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Аналитика Авито аккаунтов — глубокая внутренняя аналитика в формате Google таблиц. Анализируйте всех аккаунтов в одной таблице с полной статистикой."
+    />
+    <meta
+      name="keywords"
+      content="Авито, аналитика аккаунтов, статистика, Google таблицы, AIX"
+    />
+    <meta name="author" content="AIX" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Аналитика Авито аккаунтов — AIX" />
+    <meta
+      property="og:description"
+      content="Глубокая внутренняя аналитика аккаунтов Авито в формате Google таблиц"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icons/favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/favicons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/favicons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/favicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/favicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/favicons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/favicons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="icons/favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="icons/favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#0A0A0A" />
+    <meta
+      name="msapplication-TileImage"
+      content="icons/favicons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <!-- Fonts Preload (critical) -->
+    <link
+      rel="preload"
+      href="./fonts/inter/Inter18pt-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/montserrat/Montserrat-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Аналитика Авито аккаунтов — AIX</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" role="banner">
+      <div class="header__container container">
+        <a href="/" class="header__logo">
+          <img src="images/logo.png" alt="AIX Logo" width="48" height="48" />
+        </a>
+
+        <nav class="header__nav" aria-label="Навигация по сайту">
+          <a href="/#about" class="header__link">О сервисе</a>
+          <a href="/#tools" class="header__link">Все инструменты</a>
+          <a href="/#pricing" class="header__link">Цены</a>
+          <a
+            href="https://t.me/lev_avitolog"
+            class="header__link header__link--accent"
+            >Telegram канал</a
+          >
+        </nav>
+
+        <a href="https://t.me/aix_analytics_bot" class="btn btn--primary"
+          >Попробовать бесплатно</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="analytics-intro" aria-label="Аналитика Авито аккаунтов">
+        <div class="container page-intro analytics-intro__container">
+          <img
+            src="./images/icons/analytics-3d.png"
+            alt=""
+            class="analytics-intro__icon"
+            width="240"
+            height="183"
+          />
+          <h1 class="analytics-intro__title main-title">
+            Внутренняя <span class="text-script">аналитика</span><br />
+            Авито аккаунтов
+          </h1>
+          <p class="analytics-intro__description">
+            Анализируйте множество аккаунтов, сравнивайте разные месяцы одного
+            аккаунта и отклонения по одинаковым датам. Смотрите статистику по
+            городам и объявлениям, а также сводные показатели по всем месяцам в
+            одном дашборде с аналитикой показов, просмотров и контактов.
+          </p>
+          <a href="https://t.me/aix_analytics_bot" class="btn btn--primary"
+            >Попробовать бесплатно</a
+          >
+        </div>
+      </section>
+
+      <section class="accounts" aria-label="Список всех аккаунтов">
+        <div class="accounts__glow glow"></div>
+        <div class="container accounts__container">
+          <header class="section-header">
+            <span class="section-badge">Самые важное</span>
+            <h2 class="section-title">Список всех аккаунтов</h2>
+            <p class="section-description">
+              Количество денег на кошельке и авансе. Заблокировали или отклонили
+              объявление - подсветим!
+            </p>
+          </header>
+          <img
+            src="./images/screenshots/accounts.png"
+            alt="Таблица аккаунтов"
+            class="accounts__image"
+            loading="lazy"
+          />
+          <div class="section-cta">
+            <a href="#" class="btn btn--primary">Попробовать бесплатно</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="demand" aria-label="Анализируйте время спроса">
+        <div class="demand__glow glow"></div>
+        <div class="demand__container">
+          <div class="container">
+            <header class="demand__header section-header section-header--left">
+              <span class="section-badge">Когда ищут</span>
+              <div class="demand__title">
+                <h2 class="section-title section-title--left">
+                  Анализируйте время спроса
+                </h2>
+                <img
+                  src="./images/icons/watch.png"
+                  width="146"
+                  height="146"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <p class="section-description section-description--left">
+                Показываем какую долю трафика занимает каждый день недели и час
+                в течение дня.
+              </p>
+              <a href="#" class="btn btn--primary">Попробовать бесплатно</a>
+            </header>
+          </div>
+        </div>
+
+        <img
+          src="./images/screenshots/time-demand.png"
+          alt="Графики спроса"
+          class="demand__image"
+          loading="lazy"
+        />
+      </section>
+
+      <section class="pulse" aria-label="Держите руку на пульсе">
+        <div class="pulse__glow glow"></div>
+        <div class="container pulse__container">
+          <header class="pulse__header section-header">
+            <span class="section-badge">Максимальная детализация</span>
+            <h2 class="section-title">
+              Держите руку на <span class="text-accent">пульсе</span>
+            </h2>
+            <p class="section-description">
+              Статистика за каждый день, градиентное выделение показателей,
+              сравнение разных месяцев. Одному проекту принадлежит несколько
+              акаунтов? - просуммируйте их прямо здесь!
+            </p>
+            <img
+              class="pulse__icon"
+              src="./images/icons/heart.png"
+              width="129"
+              height="129"
+              alt=""
+              loading="lazy"
+            />
+          </header>
+          <img
+            src="./images/screenshots/pulse.png"
+            alt="Общая аналитика"
+            class="pulse__image"
+            loading="lazy"
+          />
+
+          <div class="section-cta">
+            <a href="#" class="btn btn--primary">Попробовать бесплатно</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="period" aria-label="Как прошел месяц, год">
+        <div class="period__container">
+          <div class="container">
+            <header class="section-header section-header--left">
+              <span class="section-badge">Большие периоды</span>
+              <h2 class="section-title section-title--left">
+                Как прошел месяц, год
+              </h2>
+              <p class="section-description section-description--left">
+                Отслеживайте все месяцы и аккаунты сразу, подводите итоги года.
+              </p>
+              <img
+                src="./images/icons/calendar.png"
+                width="220"
+                height="200"
+                alt=""
+                loading="lazy"
+              />
+              <a href="#" class="btn btn--primary">Попробовать бесплатно</a>
+            </header>
+          </div>
+        </div>
+        <img
+          src="./images/screenshots/period.png"
+          alt="Статистика периода"
+          class="period__image"
+          loading="lazy"
+        />
+      </section>
+
+      <section class="cities" aria-label="Статистика по городам">
+        <div class="cities__glow glow"></div>
+        <div class="container cities__container">
+          <header class="section-header">
+            <span class="section-badge">Города</span>
+            <h2 class="section-title">Статистика по городам</h2>
+            <p class="section-description">
+              Анализ эффективности продвижения в каждом городе. Выбирайте
+              аккаунт и период по конкретным датам.
+            </p>
+          </header>
+          <img
+            src="./images/screenshots/statistics-city.png"
+            alt="Города"
+            class="cities__image"
+            loading="lazy"
+          />
+
+          <div class="section-cta">
+            <a href="#" class="btn btn--primary">Попробовать бесплатно</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ads" aria-label="Статистика по объявлениям">
+        <div class="ads__glow glow"></div>
+        <div class="container ads__container">
+          <header class="section-header">
+            <span class="section-badge">Объявления</span>
+            <h2 class="section-title">Статистика по объявлениям</h2>
+            <p class="section-description">
+              Анализ эффективности продвижения каждого объявления по нужному
+              аккаунту и за нужный период.
+            </p>
+          </header>
+          <img
+            src="./images/screenshots/statistics.png"
+            alt="Объявления"
+            class="ads__image"
+            loading="lazy"
+          />
+          <div class="section-cta">
+            <a href="#" class="btn btn--primary">Попробовать бесплатно</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__divider"></div>
+        <nav class="footer__nav" aria-label="Информационные ссылки">
+          <a href="#" class="footer__link">Пользовательское соглашение</a>
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <a href="#" class="footer__link">Публичная оферта</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

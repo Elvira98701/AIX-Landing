@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AIX — сервис автоматизации для работы с Авито. Аналитика аккаунтов, бид-менеджер, умные уведомления и центр сообщений."
+    />
+    <meta
+      name="keywords"
+      content="Авито, автоматизация, аналитика, бид-менеджер, AIX"
+    />
+    <meta name="author" content="AIX" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="AIX — Сервис автоматизации для работы с Авито"
+    />
+    <meta
+      property="og:description"
+      content="Анализируйте аккаунты, продвигайте объявления умным роботом, получайте уведомления о балансе и автоотчёты прямо в Telegram."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icons/favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/favicons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/favicons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/favicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/favicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/favicons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/favicons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="icons/favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="icons/favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#0A0A0A" />
+    <meta
+      name="msapplication-TileImage"
+      content="icons/favicons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <!-- Fonts Preload (critical) -->
+    <link
+      rel="preload"
+      href="./fonts/inter/Inter18pt-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/montserrat/Montserrat-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>AIX — Сервис автоматизации для работы с Авито</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header" role="banner">
+      <div class="header__container container">
+        <a href="/" class="header__logo" aria-label="AIX - главная">
+          <img src="./images/logo.png" alt="AIX Logo" width="48" height="48" />
+        </a>
+
+        <nav class="header__nav" aria-label="Навигация по сайту">
+          <a href="#hero" class="header__link">О сервисе</a>
+          <a href="#tools" class="header__link">Все инструменты</a>
+          <a href="#pricing" class="header__link">Цены</a>
+          <a
+            href="https://t.me/lev_avitolog"
+            class="header__link header__link--accent"
+            >Telegram канал</a
+          >
+        </nav>
+
+        <a href="https://t.me/aix_analytics_bot" class="btn btn--primary"
+          >Попробовать бесплатно</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero" aria-label="Представление AIX">
+        <div class="hero__glow glow"></div>
+        <div class="hero__robot">
+          <img src="./images/hero-robot.png" alt="" />
+        </div>
+
+        <div class="container">
+          <div class="hero__content">
+            <div class="hero__logo">
+              <svg
+                width="42"
+                height="25"
+                viewBox="0 0 42 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.231715"
+                  y="0.231715"
+                  width="41.5365"
+                  height="24.41"
+                  rx="6.71973"
+                  stroke="url(#paint0_linear_9_537)"
+                  stroke-width="0.46343"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.67285 22.616L19.4244 4.13233L21.0045 2.25757L22.5846 4.13233L27.339 9.56264L38.3269 2.25757L30.4807 13.3409L38.3269 22.6108H34.9667L28.7949 15.3192L22.5766 22.616H19.4164L19.4244 17.1072L3.67285 22.616ZM11.5817 17.1072L19.4164 7.98018L19.4227 14.0711L11.5817 17.1072ZM22.5766 15.9097L28.7675 11.8322L22.5766 19.1744V15.9097ZM22.5766 12.5565L22.583 7.98018L25.1656 11.0596L22.5766 12.5565Z"
+                  fill="url(#paint1_linear_9_537)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_9_537"
+                    x1="21"
+                    y1="0"
+                    x2="21"
+                    y2="24.8734"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#BE8383" />
+                    <stop offset="1" stop-color="#583D3D" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_9_537"
+                    x1="38.3269"
+                    y1="8.96659"
+                    x2="7.3603"
+                    y2="19.5823"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FF4900" />
+                    <stop offset="1" stop-color="#7A7A7A" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <h1 class="hero__title main-title">
+              Сервис <span class="text-accent">автоматизации</span><br />
+              для работы с Авито
+            </h1>
+
+            <p class="hero__description">
+              Анализируйте аккаунты, продвигайте объявления умным роботом,
+              получайте уведомления о балансе и автоотчёты прямо в Telegram.
+            </p>
+
+            <figure class="hero__video">
+              <video
+                id="heroVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                title="Демонстрация работы AIX"
+              >
+                <source src="videos/hero-video.mp4" type="video/mp4" />
+                <source src="videos/hero-video.webm" type="video/webm" />
+              </video>
+              <button
+                class="hero__video-sound"
+                id="videoSoundBtn"
+                aria-label="Включить звук"
+              >
+                <svg
+                  class="icon-muted"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 5L6 9H2V15H6L11 19V5Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23 9L17 15M17 9L23 15"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <svg
+                  class="icon-unmuted"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 5L6 9H2V15H6L11 19V5Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M18.07 5.93C19.9447 7.80528 20.9979 10.3478 20.9979 13C20.9979 15.6522 19.9447 18.1947 18.07 20.07"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </figure>
+
+            <a href="https://t.me/aix_analytics_bot" class="btn btn--primary"
+              >Попробовать бесплатно</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section -->
+      <section class="partners" aria-label="Наши партнёры">
+        <div class="container">
+          <div class="partners__grid">
+            <div class="partners__item">
+              <img
+                src="./images/partners/in-motion.png"
+                alt="In Motion Digital"
+                loading="lazy"
+              />
+            </div>
+            <div class="partners__item">
+              <img
+                src="./images/partners/a-client.png"
+                alt="A-Client"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="benefits" id="benefits" aria-label="Преимущества сервиса">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-badge">Преимущества</span>
+            <h2 class="section-title">Усилим вашу работу</h2>
+            <p class="section-description">
+              Заберём на себя все важные рутинные процессы — а вам оставим
+              стратегию и общение с клиентами.
+            </p>
+          </header>
+
+          <div class="benefits__grid">
+            <!-- Card 1: Авитологам -->
+            <article class="benefit-card">
+              <div class="benefit-card__badge">
+                <span class="dot dot--green"></span>
+                <span>Авитологам</span>
+              </div>
+              <h3 class="benefit-card__title">
+                Быстрый анализ и автоматизация продвижения
+              </h3>
+              <p class="benefit-card__text">
+                Анализ всех аккаунтов в одной таблицей и автоматическое
+                продвижение с контролем позиций.
+              </p>
+              <div class="benefit-card__images">
+                <img
+                  src="images/icons/robot-3d.png"
+                  alt="Robot 3D"
+                  class="benefit-card__img benefit-card__img--rotate-right"
+                  loading="lazy"
+                />
+                <img
+                  src="images/icons/table-3d.png"
+                  alt="Table Icon"
+                  class="benefit-card__img benefit-card__img--rotate-left"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <!-- Card 2: Агентствам -->
+            <article class="benefit-card">
+              <div class="benefit-card__badge">
+                <span class="dot dot--green"></span>
+                <span>Агентствам</span>
+              </div>
+              <h3 class="benefit-card__title">
+                Масштабирование без рутинных процессов
+              </h3>
+              <p class="benefit-card__text">
+                Больше без ассистентов заполняющих отчеты. Автоматическое отчеты
+                в чат с клиентами. Отдельные таблицы для сотрудников и клиентов
+                под конкретные проекты.
+              </p>
+              <div class="benefit-card__images">
+                <img
+                  src="images/icons/report-3d.png"
+                  alt="Report Icon"
+                  class="benefit-card__img benefit-card__img--rotate-neg"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <!-- Card 3: Частным продавцам -->
+            <article class="benefit-card">
+              <div class="benefit-card__badge">
+                <span class="dot dot--green"></span>
+                <span>Частным продавцам</span>
+              </div>
+              <h3 class="benefit-card__title">
+                Автоматизируйте продвижение на Авито
+              </h3>
+              <p class="benefit-card__text">
+                Бид менеджер сам выведет ваши в объявения в заданные позиции
+                экономя ваше время и рекламный бюджет. А через сообщений вы не
+                пропустите ни одного сообщения от клиентов.
+              </p>
+              <div class="benefit-card__images">
+                <img
+                  src="images/screenshots/dashboard.png"
+                  alt="Dashboard"
+                  class="benefit-card__img benefit-card__img--dashboard"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <!-- Card 4: Предпринимателям -->
+            <article class="benefit-card">
+              <div class="benefit-card__badge">
+                <span class="dot dot--green"></span>
+                <span>Предпринимателям</span>
+              </div>
+              <h3 class="benefit-card__title">
+                Все процессы Авито в одном месте
+              </h3>
+              <p class="benefit-card__text">
+                Настройте контроль за сетью ваших магазинов в одном месте в
+                старом добром формате таблиц!
+              </p>
+              <div class="benefit-card__images">
+                <img
+                  src="images/icons/shop-3d.png"
+                  alt="Shop Icon"
+                  class="benefit-card__img benefit-card__img--shop"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+          </div>
+
+          <div class="section-cta">
+            <a href="https://t.me/aix_analytics_bot" class="btn btn--primary"
+              >Попробовать бесплатно</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools Section -->
+      <section class="tools" id="tools" aria-label="Все инструменты AIX">
+        <div class="tools__glow"></div>
+
+        <div class="container">
+          <header class="section-header">
+            <span class="section-badge">Востребованные функции</span>
+            <h2 class="section-title">Все инструменты</h2>
+            <p class="section-description">
+              Инструменты сервиса автоматизации Авито
+            </p>
+          </header>
+
+          <div class="tools__grid">
+            <!-- Tool 1: Аналитика -->
+            <article class="tool-card" data-tool="analytics">
+              <div class="tool-card__icon">
+                <img
+                  src="images/icons/analytics-3d.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="tool-card__title">Аналитика</h3>
+              <p class="tool-card__text">
+                Глубокая внутренняя аналитика аккаунтов Авито в формате Google
+                таблиц
+              </p>
+              <a href="./analytics.html" class="tool-card__btn">
+                <span>Возможности аналитики</span>
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 12L12 1M12 1H3M12 1V10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+
+            <!-- Tool 2: Бид-менеджер -->
+            <article
+              class="tool-card tool-card--featured"
+              data-tool="bid-manager"
+            >
+              <div class="tool-card__icon">
+                <img
+                  src="images/icons/bid-manager-3d.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="tool-card__title">Бид - менеджер</h3>
+              <p class="tool-card__text">
+                Робот сам проверит позицию и поменяет ставку. Экономит и
+                автоматизирует продвижение.
+              </p>
+              <a href="./manager.html" class="tool-card__btn">
+                <span>Возможности биддера</span>
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 12L12 1M12 1H3M12 1V10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+
+            <!-- Tool 3: Умные уведомления -->
+            <article class="tool-card" data-tool="notifications">
+              <div class="tool-card__icon">
+                <img
+                  src="images/icons/notifications-3d.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="tool-card__title">Умные уведомления</h3>
+              <p class="tool-card__text">
+                Закончился аванс - сообщим!<br />
+                Нет денег на кошельке? - тоже!
+              </p>
+              <a href="./notifications.html" class="tool-card__btn">
+                <span>Возможности уведомлений</span>
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 12L12 1M12 1H3M12 1V10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+
+            <!-- Tool 4: Центр сообщений -->
+            <article class="tool-card" data-tool="messages">
+              <div class="tool-card__icon">
+                <img src="images/icons/messages-3d.png" alt="" loading="lazy" />
+              </div>
+              <h3 class="tool-card__title">Центр сообщений</h3>
+              <p class="tool-card__text">
+                Общайтесь с клиентами быстрее через телеграмм
+              </p>
+              <a href="./messages.html" class="tool-card__btn">
+                <span>Возможности центра сообщений</span>
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 12L12 1M12 1H3M12 1V10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="section-cta">
+            <a href="https://t.me/aix_analytics_bot" class="btn btn--primary"
+              >Попробовать бесплатно</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section
+        class="testimonials"
+        id="testimonials"
+        aria-label="Отзывы пользователей"
+      >
+        <div class="container">
+          <header class="section-header">
+            <span class="section-badge">Отзывы</span>
+            <h2 class="section-title">Что говорят о AIX:</h2>
+          </header>
+
+          <div class="testimonials__grid">
+            <figure class="phone-mockup">
+              <div class="phone-mockup__frame">
+                <img
+                  src="images/devices/iphone-frame.png"
+                  alt="iPhone Frame"
+                  class="phone-mockup__device"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption class="phone-mockup__screen">
+                <img
+                  src="images/screenshots/review-1.png"
+                  alt="Отзыв пользователя 1"
+                  loading="lazy"
+                />
+              </figcaption>
+            </figure>
+
+            <figure class="phone-mockup">
+              <div class="phone-mockup__frame">
+                <img
+                  src="images/devices/iphone-frame.png"
+                  alt="iPhone Frame"
+                  class="phone-mockup__device"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption class="phone-mockup__screen">
+                <img
+                  src="images/screenshots/review-2.png"
+                  alt="Отзыв пользователя 2"
+                  loading="lazy"
+                />
+              </figcaption>
+            </figure>
+
+            <figure class="phone-mockup">
+              <div class="phone-mockup__frame">
+                <img
+                  src="images/devices/iphone-frame.png"
+                  alt="iPhone Frame"
+                  class="phone-mockup__device"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption class="phone-mockup__screen">
+                <img
+                  src="images/screenshots/review-3.png"
+                  alt="Отзыв пользователя 3"
+                  loading="lazy"
+                />
+              </figcaption>
+            </figure>
+
+            <figure class="phone-mockup">
+              <div class="phone-mockup__frame">
+                <img
+                  src="images/devices/iphone-frame.png"
+                  alt="iPhone Frame"
+                  class="phone-mockup__device"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption class="phone-mockup__screen">
+                <img
+                  src="images/screenshots/review-4.png"
+                  alt="Отзыв пользователя 4"
+                  loading="lazy"
+                />
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="section-cta">
+            <a href="https://t.me/aix_analytics_bot" class="btn btn--primary"
+              >Попробовать бесплатно</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="pricing" id="pricing" aria-label="Тарифные планы">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-badge">Цены</span>
+            <h2 class="section-title">Тарифы</h2>
+            <p class="section-description">
+              Чем больше покупаете тем больше скидка за единицу.
+            </p>
+          </header>
+
+          <div class="pricing__grid">
+            <!-- Аналитика -->
+            <article class="pricing-card">
+              <div class="pricing-card__header">
+                <h3 class="pricing-card__title">Аналитика</h3>
+                <span class="pricing-card__subtitle"
+                  >Объявлений на бид менеджер бесплатно</span
+                >
+              </div>
+              <div class="pricing-card__body">
+                <div class="pricing-row">
+                  <span>До 10 акк.</span>
+                  <span>400 руб</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 10 акк.</span>
+                  <span>380 руб</span>
+                  <span class="pricing-row__bonus">+ 5</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 20 акк.</span>
+                  <span>365 руб</span>
+                  <span class="pricing-row__bonus">+ 10</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 30 акк.</span>
+                  <span>355 руб</span>
+                  <span class="pricing-row__bonus">+ 20</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 50 акк.</span>
+                  <span>350 руб</span>
+                  <span class="pricing-row__bonus">+ 40</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Бид менеджер -->
+            <article class="pricing-card">
+              <div class="pricing-card__header">
+                <h3 class="pricing-card__title">Бид менеджер</h3>
+              </div>
+              <div class="pricing-card__body">
+                <div class="pricing-row">
+                  <span>До 10 шт</span>
+                  <span>400 руб</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 10 акк.</span>
+                  <span>380 руб</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 20 акк.</span>
+                  <span>365 руб</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 30 акк.</span>
+                  <span>355 руб</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 50 акк.</span>
+                  <span>350 руб</span>
+                </div>
+                <div class="pricing-row">
+                  <span>От 70 акк.</span>
+                  <span>Инд. по запросу</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Умные уведомления -->
+            <article class="pricing-card pricing-card--free">
+              <h3 class="pricing-card__title">Умные уведомления</h3>
+              <span class="pricing-card__price pricing-card__price--free"
+                >Бесплатно</span
+              >
+            </article>
+
+            <!-- Центр сообщений -->
+            <article class="pricing-card pricing-card--free">
+              <h3 class="pricing-card__title">Центр сообщений</h3>
+              <span class="pricing-card__price pricing-card__price--free"
+                >Бесплатно</span
+              >
+            </article>
+          </div>
+
+          <div class="section-cta">
+            <a href="https://t.me/aix_analytics_bot" class="btn btn--primary"
+              >Попробовать бесплатно</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__divider"></div>
+        <nav class="footer__nav" aria-label="Информационные ссылки">
+          <a href="#" class="footer__link">Пользовательское соглашение</a>
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <a href="#" class="footer__link">Публичная оферта</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

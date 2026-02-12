@@ -1,0 +1,92 @@
+// ============================================
+// AIX Landing - Pricing Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.pricing {
+  position: relative;
+  padding-block: var(--section-padding-y);
+  overflow: hidden;
+  background-image: url("../images/bg/pricing-bg.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 53px 55px;
+  }
+}
+
+.pricing-card {
+  --borderGradient: linear-gradient(
+    to top,
+    var(--color-primary) 0%,
+    var(--color-text) 100%
+  );
+
+  position: relative;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+
+  @include mixins.gradient-border(var(--borderGradient));
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  &__title {
+    @include mixins.typography-heading(26px, 500, var(--spacing-xl));
+    color: var(--color-text);
+    flex-shrink: 0;
+  }
+
+  &__subtitle {
+    @include mixins.typography-primary(18px, 600, 24px);
+    color: var(--color-text);
+    width: 208px;
+  }
+
+  &__body {
+    @include mixins.flex-column(var(--spacing-xl));
+  }
+
+  &__price {
+    @include mixins.typography-script();
+
+    &--free {
+      color: var(--color-success);
+    }
+  }
+
+  &--free {
+    @include mixins.flex-column(8px);
+  }
+}
+
+.pricing-row {
+  display: grid;
+  grid-template-columns: 1fr 155px 127.5px;
+  gap: var(--spacing-xl);
+  @include mixins.typography-primary(18px, 600, 24px);
+  color: var(--color-text);
+
+  &__bonus {
+    color: var(--color-text);
+  }
+}
+
+// Pricing card for Bid Manager (only 2 columns)
+.pricing-card:nth-child(2) .pricing-row {
+  grid-template-columns: 1fr 1fr;
+}

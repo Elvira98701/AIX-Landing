@@ -1,0 +1,45 @@
+// ============================================
+// AIX Landing - Demand Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.demand {
+  padding-block: var(--section-padding-y);
+  background-image: url("../images/bg/lines.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  &__glow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+
+  &__container {
+    inset: 0;
+    position: absolute;
+    z-index: 10;
+    @include mixins.flex-center;
+  }
+
+  &__header {
+    max-width: 516px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 730px;
+    z-index: 10;
+  }
+}

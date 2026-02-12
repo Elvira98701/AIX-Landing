@@ -1,0 +1,67 @@
+// ============================================
+// AIX Landing - Components
+// ============================================
+
+@use "mixins" as mixins;
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max-width) + var(--container-padding) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 4px 12px;
+  @include mixins.typography-primary(16px, 500, 22px);
+  text-align: center;
+  border-radius: var(--radius-sm);
+  @include mixins.transition(all, var(--transition-fast));
+  cursor: pointer;
+
+  &--primary {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+
+    &:hover {
+      background-color: #e63d00;
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &--secondary {
+    background-color: #f7f7f7;
+    color: var(--color-text-dark);
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  &--lg {
+    padding: 8px 20px;
+    height: 40px;
+  }
+}
+
+.glass-card {
+  @include mixins.glass-effect();
+  border: 1px solid var(--color-gray-light);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.glow {
+  width: 100%;
+  max-width: 850px;
+  height: 562px;
+  @include mixins.radial-glow();
+}

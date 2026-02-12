@@ -1,0 +1,114 @@
+// ============================================
+// AIX Landing - Hero Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.hero {
+  position: relative;
+  min-height: 979px;
+  padding-top: 80px;
+  overflow: hidden;
+
+  &__glow {
+    position: absolute;
+    top: 324px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__robot {
+    position: absolute;
+    top: 172px;
+    right: calc(50% - 500px);
+    width: 149px;
+    height: 142px;
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      @include mixins.object-fit(contain);
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 3;
+    @include mixins.flex-column();
+    align-items: center;
+    padding-block: var(--section-padding-y);
+    min-height: 979px;
+  }
+
+  &__content {
+    @include mixins.flex-column(var(--spacing-xl));
+    align-items: center;
+    max-width: 929px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    max-width: 753px;
+    @include mixins.typography-primary(18px, 400, 24px);
+    text-align: center;
+    color: var(--color-text);
+  }
+
+  &__video {
+    position: relative;
+    width: 100%;
+    max-width: 722px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    &-sound {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+      @include mixins.flex-center();
+      background: rgba(0, 0, 0, 0.6);
+      @include mixins.glass-effect(8px, 0.6);
+      border: none;
+      border-radius: 50%;
+      color: var(--color-text);
+      cursor: pointer;
+      @include mixins.transition(var(--transition-base));
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .icon-muted {
+        display: block;
+      }
+
+      .icon-unmuted {
+        display: none;
+      }
+
+      &.unmuted {
+        .icon-muted {
+          display: none;
+        }
+
+        .icon-unmuted {
+          display: block;
+        }
+      }
+    }
+  }
+}

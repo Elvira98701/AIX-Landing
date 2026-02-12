@@ -1,0 +1,27 @@
+// ============================================
+// AIX Landing - Footer
+// ============================================
+
+@use "../mixins" as mixins;
+
+.footer {
+  padding: 64px 0;
+
+  &__divider {
+    @include mixins.gradient-divider();
+    margin-bottom: var(--spacing-xl);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+
+  &__link {
+    @include mixins.typography-primary(18px, 400, 24px);
+    color: var(--color-text);
+    @include mixins.link-primary();
+  }
+}

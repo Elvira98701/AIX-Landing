@@ -1,0 +1,25 @@
+// ============================================
+// AIX Landing - Tool Intro Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.manager-intro {
+  padding-top: 80px;
+  padding-bottom: 155px;
+  position: relative;
+
+  &__glow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 938px;
+    height: 245px;
+  }
+
+  &__container {
+    min-height: 519px;
+    max-width: 753px;
+  }
+}

@@ -1,0 +1,49 @@
+// ============================================
+// AIX Landing - Messages Feature Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.messages-feature {
+  padding-block: var(--section-padding-y);
+  position: relative;
+
+  &__glow {
+    position: absolute;
+    bottom: 0;
+    right: -25%;
+    max-width: 1389px;
+    height: 800px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__content {
+    max-width: 540px;
+    @include mixins.flex-column(24px);
+    align-items: flex-start;
+  }
+
+  &__media img {
+    max-width: 390px;
+    width: 100%;
+    display: block;
+  }
+
+  &__heading {
+    @include mixins.typography-heading(42px);
+  }
+
+  &__feature {
+    margin-bottom: 12px;
+    color: var(--color-gray-light);
+    line-height: 1.5;
+  }
+}

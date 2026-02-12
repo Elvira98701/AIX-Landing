@@ -1,0 +1,33 @@
+// ============================================
+// AIX Landing - Cities Section
+// ============================================
+
+.cities {
+  padding-block: var(--section-padding-y);
+  position: relative;
+  background-image:
+    url("../images/icons/city1.png"), url("../images/icons/city2.png");
+  background-position:
+    top right,
+    bottom left;
+  background-repeat: no-repeat, no-repeat;
+
+  &__glow {
+    position: absolute;
+    top: 224px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__container {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+  }
+}

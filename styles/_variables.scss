@@ -1,0 +1,74 @@
+// ============================================
+// AIX Landing - Variables
+// ============================================
+
+:root {
+  // Colors
+  --color-black: #0a0a0a;
+  --color-dark: #0e0e0e;
+  --color-primary: #ff4900;
+  --color-success: #2ebe62;
+  --color-text: #ffffff;
+  --color-text-dark: #1f1f1f;
+  --color-gray: #878787;
+  --color-gray-light: #e5e5e5;
+  --color-blue: #73aeff;
+
+  // Typography
+  --font-primary: "Inter", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+  --font-accent: "Unbounded", sans-serif;
+  --font-script: "Sweet Mavka Script", cursive;
+
+  // Breakpoints
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1440px;
+
+  // Container
+  --container-max-width: 1140px;
+  --container-padding: 16px;
+
+  // Border radius
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  // Z-index
+  --z-header: 100;
+  --z-modal: 200;
+  --z-tooltip: 300;
+
+  // Section
+  --section-padding-y: 64px;
+
+  // Spacing
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  // Glass effect
+  --glass-blur: 10.3px;
+  --glass-opacity: 0.1;
+
+  // Typography sizes
+  --font-size-xs: 15px;
+  --font-size-sm: 16px;
+  --font-size-base: 18px;
+  --font-size-lg: 22px;
+  --font-size-xl: 26px;
+  --font-size-2xl: 48px;
+
+  // Line heights
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.33;
+  --line-height-relaxed: 1.3;
+}

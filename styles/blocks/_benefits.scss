@@ -1,0 +1,93 @@
+// ============================================
+// AIX Landing - Benefits Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.benefits {
+  padding-block: var(--section-padding-y);
+  background-color: var(--color-dark);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 372px 372px;
+    gap: 37px 111px;
+  }
+}
+
+.benefit-card {
+  position: relative;
+  @include mixins.flex-column(22px);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  @include mixins.glass-effect();
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  &__badge {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    span:last-child {
+      @include mixins.typography-primary(16px, 500, 22px);
+      color: var(--color-success);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__title {
+    @include mixins.typography-heading(22px, 500, 28px);
+    color: var(--color-text);
+  }
+
+  &__text {
+    @include mixins.typography-primary(18px, 400, 24px);
+    color: var(--color-text);
+  }
+
+  &__images {
+    position: relative;
+    flex: 1;
+    margin-top: auto;
+  }
+
+  &__img {
+    position: absolute;
+
+    &--rotate-right {
+      right: -40px;
+      bottom: 0;
+      width: 115px;
+      transform: rotate(6.88deg);
+    }
+
+    &--rotate-left {
+      right: 80px;
+      bottom: 0;
+      width: 97px;
+      transform: rotate(-16.92deg);
+    }
+
+    &--rotate-neg {
+      right: -80px;
+      bottom: -80px;
+      width: 250px;
+      transform: rotate(-18.52deg);
+    }
+
+    &--dashboard {
+      right: -100px;
+      bottom: -50px;
+      width: 250px;
+      border-radius: var(--radius-lg);
+      transform: rotate(-10.46deg);
+    }
+
+    &--shop {
+      right: 0;
+      bottom: -20px;
+      width: 172px;
+    }
+  }
+}

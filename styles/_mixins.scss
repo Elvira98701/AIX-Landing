@@ -1,0 +1,120 @@
+// ============================================
+// AIX Landing - Reusable Mixins
+// ============================================
+
+@mixin glass-effect($blur: 10.3px, $opacity: 0.1) {
+  -webkit-backdrop-filter: blur($blur);
+  backdrop-filter: blur($blur);
+  background: rgba(95, 95, 95, $opacity);
+}
+
+@mixin gradient-border($gradient, $width: 1px, $radius: var(--radius-lg)) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: $width;
+    background-image: $gradient;
+    border-radius: $radius;
+    -webkit-mask:
+      conic-gradient(#000 0 0) content-box exclude,
+      conic-gradient(#000 0 0);
+    mask:
+      conic-gradient(#000 0 0) content-box exclude,
+      conic-gradient(#000 0 0);
+  }
+}
+
+@mixin flex-column($gap: 16px) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin object-fit($fit: contain) {
+  -o-object-fit: $fit;
+  object-fit: $fit;
+}
+
+@mixin typography-primary($size: 18px, $weight: 400, $line-height: 24px) {
+  font-family: var(--font-primary);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin typography-heading($size: 22px, $weight: 500, $line-height: 28px) {
+  font-family: var(--font-heading);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin typography-accent($size: 15px, $weight: 400) {
+  font-family: var(--font-accent);
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin typography-script($size: 48px, $line-height: 1.2) {
+  font-family: var(--font-script);
+  font-size: $size;
+  line-height: $line-height;
+}
+
+// Smooth transition
+@mixin transition($property: all, $duration: var(--transition-base)) {
+  transition: $property $duration;
+}
+
+// Hover lift animation
+@mixin hover-lift($offset: 4px) {
+  &:hover {
+    transform: translateY(-#{$offset});
+  }
+}
+
+// Text gradient
+@mixin text-gradient($gradient) {
+  background-image: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Centered gradient divider
+@mixin gradient-divider($height: 1px) {
+  width: 100%;
+  height: $height;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gray),
+    transparent
+  );
+}
+
+// Link with primary color hover
+@mixin link-primary {
+  @include transition(color);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+// Radial glow effect
+@mixin radial-glow($color: var(--color-primary), $opacity: 0.3) {
+  background: radial-gradient(ellipse at center, $color 0%, transparent 80%);
+  -webkit-filter: blur(84px);
+  filter: blur(84px);
+  pointer-events: none;
+}

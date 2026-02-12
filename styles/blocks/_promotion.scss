@@ -1,0 +1,47 @@
+// ============================================
+// AIX Landing - Promotion Section
+// ============================================
+
+@use "../mixins" as mixins;
+
+.promotion {
+  padding-block: var(--section-padding-y);
+  background-image: url("../images/bg/rocket.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 15%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  &__container {
+    inset: 0;
+    position: absolute;
+    z-index: 10;
+    @include mixins.flex-center;
+  }
+
+  &__info {
+    @include mixins.flex-column(24px);
+    flex: 1;
+  }
+
+  &__robot {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__media {
+    width: 100%;
+    flex: 1;
+    max-width: 742px;
+    margin: 0 auto;
+  }
+}
